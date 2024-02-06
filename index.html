@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL-PORTFOLIO</title>
+</head>
+<link rel="stylesheet" href="new.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+    .dark_mode{
+        background-color:white;
+        color: black;
+    }
+    *{
+    margin: 0;
+    padding: 0;
+    
+    
+    box-sizing: border-box;
+     text-decoration: none;
+     border: none;
+     outline: none;
+     scroll-behavior: smooth;
+     font-family: "Poppins",sans-serif;
+}
+/* :root{
+    --bg-color:#111111;
+    --second-bg-color:#151515;
+    --text-color:white;
+    --main-color:#04fffb;
+
+} */
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    
+}
+body{
+    background: #111111;
+    color:white;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 9%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+font-size: 3rem;
+color: white;
+font-weight:  800;
+cursor: pointer;
+transition: 0.3s ease-in-out;
+}
+.logo:hover{
+transform: scale(1.1);
+
+}
+.main:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+.navbar a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    /* border-bottom: 3px solid #04fffb; */
+}
+.navbar a:hover{
+    color: #04fffb;
+    border-bottom: 3px solid #04fffb;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color:#04fffb;
+    display: none;
+
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+    font-size:large;
+
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.home-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+
+span{
+    color:limegreen ;
+}
+.logo span{
+    color: limegreen;
+}
+.home-content h3{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+.home-content h1{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+.home-img img{
+    position: relative;
+    top: 3rem;
+    width: 22vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #04fffb;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.home-img img:hover{
+    box-shadow: 0 0 50px peachpuff,
+                0 0 100px #04fffb;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 0.2rem solid #04fffb;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: #04fffb;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ea;
+}
+.social-icons a:hover{
+    color: white;
+
+    
+}
+</style>
+
+<body>
+    <header class="header">
+        <a href="#home" class="logo">MAHAMMAD 
+            <span>AKRAM</span>
+        </a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+       
+        <nav class="navbar">
+            
+                <a href="#About">About</a>
+                <a href="#Education">Education</a>
+                <a href="#Achievements">Achievements</a>
+                <a href="#Skills">Skills</a>
+                <a href="#blog">Blog</a>
+                <a href="#Contact">Contact</a>
+                <a href="#darkmode" onclick="darkmode()">Togglemode</a>
+                
+
+            
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="IMG.jpeg" style="text-align: right;">
+        </div>
+        <div class="home-content">
+            <div class="main"><h1 > It's <span>Akram</span></h1></div>
+            <h3 class="text-animation"> 
+                <span></span>
+            </h3>
+
+            <p>
+
+            </p>
+            <div class="social-icons">
+                <a href ="https://github.com/MahammaadAkram"><i class='bx bxl-github'></i>
+                <a href="https://www.instagram.com/_mahammad_akram/"><i class='bx bxl-instagram' ></i>
+                <a href="https://www.facebook.com/profile.php?id=100095359122721"><i class='bx bxl-facebook-circle' ></i>
+                    <a href="mailto:mahammadakramsamuluru@gmail.com"><i class='bx bxl-gmail' ></i></a>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="About" >
+        <h1 style="font-size:60px; color: rgb(131, 127, 255);"><b>About Myself</b></h1>
+        <p style="font-size: larger;">
+            Hello there! I'm <b style="color: red;">SAMULURU MAHAMMAD AKRAM</b>. I'm a student in <b style="color: red;">IIIT Hyderabad</b>,
+            currently studying 1st year.I'm really into studying and coding.I enjoy the balance between coding,reading books and playing sports
+        </p>
+    </section>
+
+    <section  id="Education">
+        <h1 style="font-size:60px ; color: rgb(131,127,255);"> <b>EDUCATION BACKGROUND</b></h1>
+        <p style="font-size: larger;">
+            <!-- I am currently in my first year pursuing a Bachelor of Technology (B.Tech) in Computer Science and Engineering at the esteemed International Institute of Information Technology (IIIT) Hyderabad.<br> This academic journey at IIIT Hyderabad, renowned for its cutting-edge curriculum and collaborative learning environment, has been an exhilarating experience. Engaging in a diverse range of courses, spanning algorithms,<br> programming languages, and computer systems, I am laying the foundation for a comprehensive understanding of computer science. -->
+       
+            <table style="width: 100%; height: 100%;  ">
+                
+                <tr>
+                    <td style="color: rgb(0, 139, 5);">
+                        <b> 
+                        Education
+                        </b>
+                    </td>
+                    <td style="color: rgb(0, 139, 5);">
+                        <b>
+                        Institution
+                        </b>
+                    </td>
+                    <td style="color: rgb(0, 139, 5);">
+                        <b>
+                        Location
+                        </b>
+                    </td>
+                    
+                    <td style="color: rgb(0, 139, 5);">
+                        <b>
+                        Years
+                        </b>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        Primary School
+                    </td>
+                    <td>
+                        Padmavathi
+                    </td>
+                    <td>
+                        Jammalamadugu,AP
+                    </td>
+                    <td>
+                        2009-2016
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Middle School
+                    </td>
+                    <td>
+                        KKR Gowtham
+                    </td>
+                    <td>
+                        Gudivada,AP
+                    </td>
+                    <td>
+                        2017-2019
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Intermediate
+                    </td>
+                    <td>
+                        MIITYedu
+                    </td>
+                    <td>
+                        Hyderabad
+                    </td>
+                    <td>
+                        2020-2022
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        College
+                    </td>
+                    <td>
+                        IIIT Hyderabad
+                    </td>
+                    <td>
+                        Hyderabad,TS
+                    </td>
+                    <td>
+                        2023-2027
+                    </td>
+                </tr>
+            </table> </p>
+    </section>
+
+    <section id="Achievements">
+        <h1 style="font-size:60px; color: rgb(131,127,255);"> <b>ACHIEVEMENTS</b></h1>
+        <p style="font-size: larger;">
+            I take pride in having secured admission to the prestigious International Institute of Information Technology (IIIT) Hyderabad after successfully cracking the Joint Entrance Examination (JEE). This accomplishment reflects my dedication to academic excellence and passion for the field of technology. The journey from JEE preparation to being a part of IIIT Hyderabad has been both challenging and rewarding.<br> It not only signifies my proficiency in fundamental engineering concepts but also showcases my commitment to staying at the forefront of innovation. 
+            Being at IIIT Hyderabad, I have embraced the vibrant academic environment, engaging in various projects, collaborative initiatives, and contributing to the rich tapestry of the institute's academic culture. This journey is a testament to my resilience, curiosity, and determination to excel in the ever-evolving world of Information Technology.
+        </p>
+    </section>
+
+    <section  id="Skills">
+        <h1 style="font-size:60px; color: rgb(131,127,255);"> <b>SKILLS</b></h1>
+        <p style="font-size: larger;">
+            Beyond the academic realm, my skills extend to the athletic arena, where I excel in 
+            various sports. Adept at playing volleyball,cricket and other games, <br>
+            I bring a competitive and disciplined spirit to the playing field. My agility, strategic 
+            thinking, and teamwork abilities have not only earned me recognition <br>within the sports 
+            community but have also contributed to my overall personal development. The 
+            commitment and dedication required to master sports have <br>instilled in me valuable
+            traits such as resilience, leadership, and the ability to perform under pressure. Whether 
+            on the field or in the classroom, I believe in <br>leveraging my skills to create a well-rounded and balanced approach to life.</p>
+    </section>
+   <section id="blog">
+<div>
+    <h2 style="font-size:60px; color: rgb(131,127,255);">Blog List</h2>
+    <br><br><br><br><br><br>
+    <ul>
+        <li><a href="blog1.html" style="font-size: 40px; color: rgb(13, 243, 116);">Blog 1</a></li>
+        <br><br><br><br>
+        <li><a href="blog2.html"style="font-size: 40px; color: rgb(13, 243, 116)">Blog 2</a></li>
+    </ul>
+</div>
+</section>
+
+<section id="Contact">
+    <h1 style="font-size:60px; color: rgb(131,127,255);"> <b>CONTACT</b></h1>
+<br><br><br><br>    
+    <a href ="https://github.com/MahammaadAkram"><i class='bx bxl-github' style="font-size:xx-large; color: red;"></i>
+        <a href="https://www.instagram.com/_mahammad_akram/"><i class='bx bxl-instagram'  style="font-size: xx-large; color: red;"></i>
+        <a href="https://www.facebook.com/profile.php?id=100095359122721"><i class='bx bxl-facebook-circle' style="font-size: xx-large; color: red;"></i>
+            <a href="mailto:mahammadakramsamuluru@gmail.com"><i class='bx bxl-gmail' style="font-size: xx-large; color: red;"></i></a>
+        
+</section>
+<h1>
+<a href="IMG.jpeg" style="text-align:right ; color: blue; font-size: xx-large;">click here to view the file</a>
+</h1>
+<script>
+    function darkmode() {
+            var element = document.body;
+            element.classList.toggle("dark_mode");
+            element.classList.toggle("light_mode");
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blog 1!!!</title>
+    <style>
+        #likeIcon {
+            float: left;
+            width: 3%;
+        }
+
+        .blogContainer {
+            display: flex;
+            background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.1448711260.1707004800&semt=sph);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-color: aqua;
+            margin: 0 2%;
+            border: 2px solid black;
+            justify-content: space-evenly;
+            flex-direction: column;
+            margin-top: 35vh;
+        }
+
+        .blogHeader {
+            font-style: italic;
+            margin-left: 1%;
+        }
+
+        .blogContent {
+            margin-left: 0.21%;
+        }
+
+        #commentInput_blog1 {
+            margin-left: 0.21%;
+        }
+
+        .actionButton {
+            width: 8%;
+            margin-left: 0.21%;
+        }
+        /* body{
+            color: lightgreen;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="blogContainer">
+        <h1 class="blogHeader">BLOG 1!!!</h1>
+        <img id="likeIcon" src="https://clipart-library.com/images/RkiMyoycj.png" onclick="likeBlog('blog1')">
+        <p class="blogContent">LIKES: <span id="likeCount_blog1">0</span></p>
+        <p class="blogContent">COMMENTS:</p>
+        <div id="comments_blog1"></div> <!-- Container for comments -->
+        <textarea id="commentInput_blog1" placeholder="Add a comment"></textarea>
+        <button class="actionButton" onclick="addComment('blog1')">Add comment</button>
+    </div>
+
+    <script>
+        function likeBlog(blogId) {
+            const likeCountElement = document.getElementById(`likeCount_${blogId}`);
+            let likeCount = parseInt(likeCountElement.textContent);
+            likeCount++;
+            likeCountElement.textContent = likeCount;
+            localStorage.setItem(`likeCount_${blogId}`, likeCount);
+        }
+
+        function loadPersistentData(blogId) {
+            const likeCountElement = document.getElementById(`likeCount_${blogId}`);
+            likeCountElement.textContent = localStorage.getItem(`likeCount_${blogId}`) || 0;
+        }
+
+        window.onload = function () {
+            loadPersistentData('blog1');
+
+        };
+    </script>
+</body>
+
+</html>
